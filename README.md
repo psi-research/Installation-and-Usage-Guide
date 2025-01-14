@@ -37,7 +37,7 @@ Step 2: Dataset Setup
 cd datasets
 
 2. Add training data to final_trainset.jsonl in the following format:
-```json
+```bash
 {
     "layer": 4,
     "input": "오후 3시경 스쿨존 내에서 청소년 운전자가 조작하던 오토바이가 과속으로 주행하다 보행 중이던 초등학생을 충격하는 사고가 발생하였습니다.",
