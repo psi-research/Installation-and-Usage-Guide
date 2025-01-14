@@ -43,3 +43,40 @@ cd datasets
     "output": "```json\n{\n    \"vehicle_type\": [\"오토바이\"]\n}\n```",
     "system": "You need to find and extract keywords corresponding to the following labels..."
 }
+
+3. Build the dataset:
+```bash
+python build_data.py
+
+1.3 Model Training
+1. Navigate to the training configuration directory:
+```bash
+cd /autodrive/train_config
+
+2. Modify the yml file:
+- Set the dataset path in datasets.path.
+- Set the model save path in output_dir.
+
+3. Start the training process:
+```bash
+./run.sh
+
+1.4 Model Merging
+1. Update the merge.sh script:
+- Update the path for ./train_config/train_v1.yml.
+- Set the correct --lora_model_dir path.
+
+2. Execute the merge:
+```bash
+./merge.sh
+
+
+2. Model Serving Setup (vllm-serving)
+2.1 Docker Installation
+1. Load the Docker image:
+```bash
+docker load -i vllm-serving-img.tar
+
+2. Run the Docker container:
+```bash
+./docker_run.sh
