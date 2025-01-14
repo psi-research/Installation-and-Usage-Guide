@@ -16,9 +16,11 @@
    docker load -i autodrive-ner-finetune-img.tar
 
 2. Run the Docker container:
+   ```bash
    ./docker_run.sh
 
 1.2 Training Process
 Step 0: Access Docker Container
 Access the running Docker container:
+```bash
 docker exec -it autodrive-ner-finetune /bin/bash
