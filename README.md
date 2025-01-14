@@ -19,6 +19,7 @@
    ```bash
    ./docker_run.sh
 
+
 1.2 Training Process
 Step 0: Access Docker Container
 Access the running Docker container:
@@ -48,6 +49,7 @@ cd datasets
 ```bash
 python build_data.py
 
+
 1.3 Model Training
 1. Navigate to the training configuration directory:
 ```bash
@@ -60,6 +62,7 @@ cd /autodrive/train_config
 3. Start the training process:
 ```bash
 ./run.sh
+
 
 1.4 Model Merging
 1. Update the merge.sh script:
